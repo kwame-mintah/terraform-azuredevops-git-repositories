@@ -25,3 +25,6 @@ secrets.tfvars
 
 ## Terragrun cache
 .terragrunt-cache
+
+# Terraform lockfile
+.terraform.lock.hcl
