@@ -2,6 +2,29 @@
 
 This module aids in the creation of multiple git repositories, within your Azure DevOps project.
 
+## Usage
+
+```hcl
+module "git_repositories" {
+  source                = "git@github.com:kwame-mintah/terraform-azuredevops-git-repositories.git"
+  project_name          = var.project_name
+  init_git_repositories = [
+    {
+      name = "import-repository",
+      source_type = "Git",
+      source_url = "https://github.com/kwame-mintah/terraform-azuredevops-git-repositories.git",
+      init_type = "Import",
+    },
+    {
+      name = "clean-repository"
+      source_type = null
+      source_url = null
+      init_type = "Clean"
+    }
+  ]
+}
+```
+
 ## Pre-Commit hooks
 
 Git hook scripts are very helpful for identifying simple issues before pushing any changes. Hooks will run on every commit automatically pointing out issues in the code e.g. trailing whitespace.
