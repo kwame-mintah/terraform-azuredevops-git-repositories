@@ -1,3 +1,9 @@
+## v0.2.0 (2023-09-16)
+
+### Feat
+
+- **example**: add example for using module in a project
+
 ## v0.1.0 (2023-09-05)
 
 ### Feat
