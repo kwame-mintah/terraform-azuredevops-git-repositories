@@ -1,3 +1,17 @@
+## v1.0.0 (2023-12-04)
+
+### BREAKING CHANGE
+
+- Updated `init_git_repositories` to include `default_branch` object for each repository created.
+
+### Feat
+
+- **azuredevops_git_repository**: allow each repository to use a different default branch
+
+### Refactor
+
+- **example**: update example to demostrate different default branches
+
 ## v0.2.0 (2023-09-16)
 
 ### Feat
