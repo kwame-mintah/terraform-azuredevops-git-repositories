@@ -10,18 +10,19 @@ module "git-repositories" {
   version = "0.2.0"
   init_git_repositories = [
     {
-      name        = "import-repository",
-      source_type = "Git",
-      source_url  = "https://github.com/kwame-mintah/terraform-azuredevops-git-repositories.git",
-      init_type   = "Import",
+      name           = "import-repository",
+      default_branch = "refs/head/main"
+      source_type    = "Git",
+      source_url     = "https://github.com/kwame-mintah/terraform-azuredevops-git-repositories.git",
+      init_type      = "Import",
     },
     {
-      name        = "clean-repository"
-      source_type = null
-      source_url  = null
-      init_type   = "Clean"
-    }
-  ]
+      name           = "clean-repository"
+      default_branch = "refs/head/master"
+      source_type    = null
+      source_url     = null
+      init_type      = "Clean"
+  }]
 }
 ```
 
