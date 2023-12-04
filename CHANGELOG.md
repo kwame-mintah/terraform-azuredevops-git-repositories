@@ -1,3 +1,9 @@
+## v1.0.1 (2023-12-04)
+
+### Refactor
+
+- **example**: incorrectly reference default branch
+
 ## v1.0.0 (2023-12-04)
 
 ### BREAKING CHANGE
