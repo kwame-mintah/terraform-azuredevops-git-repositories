@@ -14,20 +14,11 @@ variable "init_git_repositories" {
 EOF
 
   type = list(object({
-    name        = string
-    source_type = string
-    source_url  = string
-    init_type   = string
+    name           = string
+    default_branch = string
+    source_type    = string
+    source_url     = string
+    init_type      = string
   }))
   default = []
-}
-
-variable "git_default_branch" {
-  description = <<-EOF
-    The ref of the default branch. 
-    Will be used as the branch name for initialized repositories.
-EOF
-
-  type    = string
-  default = "refs/heads/main"
 }

@@ -44,19 +44,18 @@ Code formatting and documentation for `variables` and `outputs` is generated usi
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK --->
-
 ## Requirements
 
-| Name                                                                           | Version  |
-| ------------------------------------------------------------------------------ | -------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement_terraform)       | >= 1.4.5 |
-| <a name="requirement_azuredevops"></a> [azuredevops](#requirement_azuredevops) | >= 0.8.0 |
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.4.5 |
+| <a name="requirement_azuredevops"></a> [azuredevops](#requirement\_azuredevops) | >= 0.8.0 |
 
 ## Providers
 
-| Name                                                                     | Version |
-| ------------------------------------------------------------------------ | ------- |
-| <a name="provider_azuredevops"></a> [azuredevops](#provider_azuredevops) | 0.8.0   |
+| Name | Version |
+|------|---------|
+| <a name="provider_azuredevops"></a> [azuredevops](#provider\_azuredevops) | 0.8.0 |
 
 ## Modules
 
@@ -64,24 +63,22 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                                          | Type        |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [azuredevops_git_repository.repo](https://registry.terraform.io/providers/microsoft/azuredevops/latest/docs/resources/git_repository)         | resource    |
+| Name | Type |
+|------|------|
+| [azuredevops_git_repository.repo](https://registry.terraform.io/providers/microsoft/azuredevops/latest/docs/resources/git_repository) | resource |
 | [azuredevops_git_repository.repo_attr](https://registry.terraform.io/providers/microsoft/azuredevops/latest/docs/data-sources/git_repository) | data source |
-| [azuredevops_project.project](https://registry.terraform.io/providers/microsoft/azuredevops/latest/docs/data-sources/project)                 | data source |
+| [azuredevops_project.project](https://registry.terraform.io/providers/microsoft/azuredevops/latest/docs/data-sources/project) | data source |
 
 ## Inputs
 
-| Name                                                                                             | Description                                                                                      | Type                                                                                                                       | Default             | Required |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ------------------- | :------: |
-| <a name="input_git_default_branch"></a> [git_default_branch](#input_git_default_branch)          | The ref of the default branch. <br>Will be used as the branch name for initialized repositories. | `string`                                                                                                                   | `"refs/heads/main"` |    no    |
-| <a name="input_init_git_repositories"></a> [init_git_repositories](#input_init_git_repositories) | (Optional) Names of git repositories to add into the <br>project.                                | <pre>list(object({<br> name = string<br> source_type = string<br> source_url = string<br> init_type = string<br> }))</pre> | `[]`                |    no    |
-| <a name="input_project_name"></a> [project_name](#input_project_name)                            | Name of the Project.                                                                             | `string`                                                                                                                   | n/a                 |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_init_git_repositories"></a> [init\_git\_repositories](#input\_init\_git\_repositories) | (Optional) Names of git repositories to add into the <br>project. | <pre>list(object({<br>    name           = string<br>    default_branch = string<br>    source_type    = string<br>    source_url     = string<br>    init_type      = string<br>  }))</pre> | `[]` | no |
+| <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Name of the Project. | `string` | n/a | yes |
 
 ## Outputs
 
-| Name                                                                                            | Description                             |
-| ----------------------------------------------------------------------------------------------- | --------------------------------------- |
-| <a name="output_git_repos_attributes"></a> [git_repos_attributes](#output_git_repos_attributes) | Retrieve the git repository attributes. |
-
+| Name | Description |
+|------|-------------|
+| <a name="output_git_repos_attributes"></a> [git\_repos\_attributes](#output\_git\_repos\_attributes) | Retrieve the git repository attributes. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK --->

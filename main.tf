@@ -24,7 +24,7 @@ resource "azuredevops_git_repository" "repo" {
   for_each       = { for key, value in var.init_git_repositories : key => value }
   project_id     = data.azuredevops_project.project.id
   name           = each.value.name
-  default_branch = var.git_default_branch
+  default_branch = each.value.default_branch
   initialization {
     init_type   = each.value.init_type
     source_type = each.value.source_type
